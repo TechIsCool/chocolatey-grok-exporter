@@ -1,0 +1,25 @@
+version: 1.0.{build}
+
+environment:
+  TOKEN:
+    secure: hIJKQ1Spg7Z+jgBznNcdpXtxyTRWBAFQGAukgMK7rtPQQtNTLXJNKFbKnZH8g33A
+
+platform:
+  - x64
+  
+build_script:
+  - ps: >-
+      ./grok_exporter.ps1;
+      choco pack output/grok_exporter.nuspec
+
+test_script:
+  - ps: cinst grok_exporter -fdvy -source "$pwd;http://chocolatey.org/api/v2/"
+  - ps: cuninst -fdvy grok_exporter
+  - ps: cinst grok_exporter -fdvy --x86 -source "$pwd;http://chocolatey.org/api/v2/"
+  - ps: cuninst -fdvy grok_exporter
+
+ deploy_script:
+   - ps: >-
+       ./deploy.ps1;
+artifacts:
+  - path: '**\*.nupkg'

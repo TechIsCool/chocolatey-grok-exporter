@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>grok_exporter</id>
+    <version>##VERSION##</version>
+    <title>grok_exporter</title>
+    <authors>fstab</authors>
+    <owners>TechIsCool</owners>
+    <licenseUrl>https://github.com/fstab/grok_exporter/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/fstab/grok_exporter</projectUrl>
+    <packageSourceUrl>https://github.com/TechIsCool/chocolatey-grok-exporter</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Export Prometheus metrics from arbitrary unstructured log data.</description>
+    <summary>Export Prometheus metrics from arbitrary unstructured log data.</summary>
+    <releaseNotes>##RELEASENOTES##</releaseNotes>
+    <tags>grok_exporter</tags>
+    <dependencies>
+      <dependency id="nssm" />
+    </dependencies>
+  </metadata>
+</package>
